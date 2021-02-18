@@ -1,3 +1,5 @@
+Build folder is not ignored for direct deployment to GH Pages or netlify
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,16 @@
+@import "/src/config";
+.footer {
+  background-color: $clr-black;
+  color: $clr-white;
+  min-height: 40vh;
+}
+.navContainer {
+  @include flex-row;
+  @include container;
+  align-items: initial;
+  justify-content: space-evenly;
+  gap: 2rem;
+  @include tablet-sm {
+    flex-wrap: wrap;
+  }
+}

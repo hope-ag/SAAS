@@ -16,6 +16,9 @@
   }
   &.white {
     background-color: $clr-white;
+    background-image: url("/assets/Path3.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 }
 .content {

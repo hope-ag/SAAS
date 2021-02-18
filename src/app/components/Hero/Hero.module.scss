@@ -19,6 +19,9 @@
   @include tablet-sm {
     flex-direction: column-reverse;
   }
+  @include mobile {
+    margin-bottom: 2re;
+  }
   div:nth-of-type(1) {
     min-width: 40rem;
     @include tablet-sm {

@@ -3,14 +3,99 @@
   background-color: $clr-black;
   color: $clr-white;
   min-height: 40vh;
+  @include flex-col;
+  align-items: center;
+  justify-content: center;
 }
 .navContainer {
   @include flex-row;
   @include container;
   align-items: initial;
-  justify-content: space-evenly;
+  justify-content: space-around;
   gap: 2rem;
   @include tablet-sm {
+    justify-content: flex-start;
     flex-wrap: wrap;
   }
+}
+.icons {
+  @include flex-row;
+  @include mobile {
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+  span {
+    cursor: pointer;
+    height: 5rem;
+    @include flex-col;
+    justify-content: center;
+    width: 5rem;
+    border-radius: 50%;
+    color: $clr-white;
+    font-weight: bold;
+    margin: 1rem;
+    background-color: rgb(181, 0, 166);
+    &:hover {
+      transform: scale(1.07);
+      @include transition-short;
+    }
+    @include mobile {
+      height: 3.2rem;
+      width: 3.2rem;
+    }
+    svg {
+      font-size: 2.5rem;
+      @include mobile {
+        font-size: 2rem;
+      }
+    }
+    &:nth-of-type(1) {
+      background-color: blue;
+    }
+    &:nth-of-type(3) {
+      background-color: $clr-secondary;
+    }
+    &:nth-of-type(5) {
+      background-color: $clr-primary;
+    }
+    &:nth-of-type(4) {
+      background-color: rgb(179, 0, 0);
+    }
+    &:nth-of-type(6) {
+      background-color: rgb(184, 5, 2);
+    }
+  }
+}
+.logo {
+  margin-top: 4rem;
+  margin-right: 4rem;
+  height: 50px;
+  width: 50px;
+  display: inline-block;
+  color: $clr-black;
+  border-radius: 50%;
+  @include tablet {
+    margin-right: 0;
+  }
+  @include tablet-sm {
+    margin: 4rem 0;
+  }
+  @include flex-row;
+  span {
+    @include flex-row;
+    img {
+      height: 5.2rem;
+      border-radius: 6rem;
+    }
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 5px;
+      color: $clr-white;
+    }
+  }
+}
+
+.copy {
+  line-height: 3;
+  margin-bottom: 2rem;
 }
